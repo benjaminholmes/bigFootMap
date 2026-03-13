@@ -1,0 +1,75 @@
+<!-- Open map.html in visual studio code's live server to view map -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Foot's Myth of America</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson@3"></script>
+    <script type="module" src="/script.js"></script>
+    
+</head>
+<body>
+    <!-- Container for the SVG map -->
+    <svg id="map" style="background-color: black" width="6000" height="4000"></svg>
+
+    <div class="legend">
+        <ul class="legend1">
+        <li class="symbol"><img class="image" src="img/arrow.png" alt="arrow-symbol"></br>Arrow</br><span style="color: yellow;">Protection</br></span>Oregon</li>
+        <li class="symbol"><img class="image" src="img/arrowhead.png" alt="arrowhead"></br>Arrowhead</br><span style="color: yellow;">Alertness</br></span>Colorado</li>  
+        <li class="symbol"><img class="image" src="img/bear-track.png" alt="bear-track"></br>Bear Track</br><span style="color: yellow;">Good Omen</br></span>New Mexico</li>  
+        <li class="symbol"><img class="image" src="img/bow&arrow.png" alt="bow&arrow"></br>Bow & Arrow</br><span style="color: yellow;">Hunting</br></span>Indiana</li>  
+        <li class="symbol"><img class="image" src="img/buffalo-skull.png" alt="buffalo-skull"></br>Buffalo Skull</br><span style="color: yellow;">Sacredness</br></span>Iowa</li>  
+        <li class="symbol"><img class="image" src="img/buffalo.png" alt="buffalo"></br>Buffalo</br><span style="color: yellow;">Abundance</br></span>Virginia</li>  
+        <li class="symbol"><img class="image" src="img/butterfly.png" alt="butterfly"></br>Butterfly</br><span style="color: yellow;">Everlasting Life</br></span>Idaho</li>  
+        <li class="symbol"><img class="image" src="img/cactus.png" alt="cactus"></br>Cactus</br><span style="color: yellow;">Desert</br></span>Utah</li>  
+        <li class="symbol"><img class="image" src="img/campfire.png" alt="campfire"></br>Campfire</br><span style="color: yellow;">Temporary Overnight Stop</br></span>Missouri</li>  
+        <li class="symbol"><img class="image" src="img/cross.png" alt="cross"></br>Cross</br><span style="color: yellow;">Paths Crossing</br></span>Arizona</li>  
+        <li class="symbol"><img class="image" src="img/crossedarrows.png" alt="crossedarrows"></br>Crossed Arrows</br><span style="color: yellow;">Friendship</br></span>New Jersey</li>
+        <li class="symbol"><img class="image" src="img/dancer.png" alt="dancer"></br>Dancer</br><span style="color: yellow;">Celebration</br></span>Delaware</li>
+        <li class="symbol"><img class="image" src="img/deadpeople.png" alt="deadpeople"></br>Dead People</br><span style="color: yellow;">Death</br></span>Rhode Island</li>
+        <li class="symbol"><img class="image" src="img/dragonfly.png" alt="dragonfly"></br>Dragonfly</br><span style="color: yellow;">Resurrection</br>Renewal</br></span>Mississippi</li>
+        <li class="symbol"><img class="image" src="img/dreamcatcher.png" alt="dreamcatcher"></br>Dreamcatcher</br><span style="color: yellow;">Protection</br>From Nightmares</br></span>California</li>
+        <li class="symbol"><img class="image" src="img/drum.png" alt="drum"></br>Drum</br><span style="color: yellow;">The Great Spirit</br></span>South Carolina</li>
+        <li class="symbol"><img class="image" src="img/dryingrack.png" alt="dryingrack"></br>Drying Rack</br><span style="color: yellow;">Plenty Of Meat</br></span>Maryland</li>
+        <li class="symbol"><img class="image" src="img/eagle.png" alt="eagle"></br>Eagle</br><span style="color: yellow;">Chief</br></span>South Dakota</li>
+        <li class="symbol"><img class="image" src="img/eaglefeathers.png" alt="eaglefeathers"></br>Eagle Feathers</br><span style="color: yellow;">Friendship</br></span>Alaska</li>
+        <li class="symbol"><img class="image" src="img/eightpointedstar.png" alt="eightpointedstar"></br>Eight Pointed Star</br><span style="color: yellow;">Hope & Guidance</br></span>Minnesota</li>
+        <li class="symbol"><img class="image" src="img/feather.png" alt="feather"></br>Feather</br><span style="color: yellow;">Courage, Wisdom & Strength</br></span>Wisconsin</li>
+        <li class="symbol"><img class="image" src="img/fish.png" alt="fish"></br>Fish</br><span style="color: yellow;">Body Of Water Holding Food</br></span>New York</li>
+        <li class="symbol"><img class="image" src="img/flower.png" alt="flower"></br>Flower</br><span style="color: yellow;">Courtship</br></span>North Dakota</li>
+        <li class="symbol"><img class="image" src="img/4ages.png" alt="4ages-symbol"></br>Four Ages</br><span style="color: yellow;">Infancy, Youth,</br>Middle & Old Age</span></br>Tennessee</li>
+        <li class="symbol"><img class="image" src="img/gecko.png" alt="gecko"></br>Gecko</br><span style="color: yellow;">Dream Time</br></span>Florida</li>
+        </ul>
+        
+        <ul class="legend2">
+        <li class="symbol1"><img class="image" src="img/harmony.png" alt="harmony"></br>Harmony</br><span style="color: yellow;">Balance</br>& Peace</br></span>Michigan</li>
+        <li class="symbol1"><img class="image" src="img/headdress.png" alt="headdress"></br>Headdress</br><span style="color: yellow;">Ceremonial Dance</br></span>Wyoming</li>
+        <li class="symbol1"><img class="image" src="img/healinghand.png" alt="healinghand"></br>Healing Hand</br><span style="color: yellow;">Protection</br></span>Louisiana</li>
+        <li class="symbol1"><img class="image" src="img/hogan.png" alt="hogan"></br>Hogan</br><span style="color: yellow;">Permanent Home</br></span>Massachusetts</li>
+        <li class="symbol1"><img class="image" src="img/homecoming.png" alt="homecoming"></br>Homecoming</br><span style="color: yellow;">Return Of A Warrior</br></span>Georgia</li>
+        <li class="symbol1"><img class="image" src="img/horse.png" alt="horse"></br>Horse</br><span style="color: yellow;">Journey</br></span>Ohio</li>
+        <li class="symbol1"><img class="image" src="img/hummingbird.png" alt="hummingbird"></br>Hummingbird</br><span style="color: yellow;">Love</br>& Happiness</br></span>West Virginia</li>
+        <li class="symbol1"><img class="image" src="img/kokopelli.png" alt="kokopelli"></br>Kokopelli</br><span style="color: yellow;">Fertility</br>& Joy</br></span>Washington</li>
+        <li class="symbol1"><img class="image" src="img/lightning.png" alt="lightning"></br>Lightning</br><span style="color: yellow;">Power</br>& Speed</br></span>Connecticut</li>
+        <li class="symbol1"><img class="image" src="img/lightningarrow.png" alt="lightningarrow"></br>Lightning Arrow</br><span style="color: yellow;">Swiftness</br></span>New Hampshire</li>
+        <li class="symbol1"><img class="image" src="img/man.png" alt="man"></br>Man</br><span style="color: yellow;">Human Life</br></span>Arkansas</li>
+        <li class="symbol1"><img class="image" src="img/moon.png" alt="moon"></br>Moon</br><span style="color: yellow;">Guardian Of The Earth</br></span>Pennsylvania</li>  
+        <li class="symbol1"><img class="image" src="img/morningstar.png" alt="morningstar"></br>Morning Star</br><span style="color: yellow;">Guidance</br></span>Montana</li>
+        <li class="symbol1"><img class="image" src="img/mountain.png" alt="mountain"></br>Mountain Range</br><span style="color: yellow;">Destination</br></span>Kansas</li>
+        <li class="symbol1"><img class="image" src="img/peacepipe.png" alt="peacepipe"></br>Peace Pipe</br><span style="color: yellow;">Spiritual Ceremony</br></span>Oklahoma</li>
+        <li class="symbol1"><img class="image" src="img/rainclouds.png" alt="rainclouds"></br>Rain Clouds</br><span style="color: yellow;">Good Prospects</br></span>Kentucky</li>
+        <li class="symbol1"><img class="image" src="img/shamaneye.png" alt="shamaneye"></br>Shaman Eye</br><span style="color: yellow;">Wise & Watchful</br></span>Texas</li>
+        <li class="symbol1"><img class="image" src="img/snake.png" alt="snake"></br>Snake</br><span style="color: yellow;">Defiance</br></span>Illinois</li>
+        <li class="symbol1"><img class="image" src="img/sunrays.png" alt="sunrays"></br>Sun Rays</br><span style="color: yellow;">Constancy</br></span>Nevada</li>
+        <li class="symbol1"><img class="image" src="img/sunsymbol.png" alt="sunsymbol"></br>Sun Symbol</br><span style="color: yellow;">Happiness</br></span>Nebraska</li>
+        <li class="symbol1"><img class="image" src="img/tepee.png" alt="tepee"></br>Tepee</br><span style="color: yellow;">Temporary Home</br></span>Maine</li>
+        <li class="symbol1"><img class="image" src="img/thunderbirdtrack.png" alt="thunderbirdtrack"></br>Thunderbird Track</br><span style="color: yellow;">Bright Prospects</br></span>Vermont</li>
+        <li class="symbol1"><img class="image" src="img/totem.png" alt="totem"></br>Totem</br><span style="color: yellow;">A Spirit Being</br></span>North Carolina</li>
+        <li class="symbol1"><img class="image" src="img/turtle.png" alt="turtle"></br>Turtle</br><span style="color: yellow;">Perseverance</br>& Long Life</br></span>Alabama</li>
+        </ul> 
+    </div>
+</body>
+</html>

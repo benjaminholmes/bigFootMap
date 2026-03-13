@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+}
+
+.dot {
+    fill: steelblue;
+    stroke: lime;
+    fill-opacity: 0.7;
+}
+
+.legend{
+    background-color: black;
+    font-size: 18px;
+    color: white;
+    font-family: cursive;
+    width: 6000px;
+}
+
+.legend1{
+    position: absolute;
+    top: 0px;
+    display: flex;
+    padding-inline-start: 0;
+    margin: 0;
+    background-color: black;
+    align-items: flex-end;
+    width: 6000px;
+}
+
+.legend2{
+    position: absolute;
+    display: flex;
+    padding-inline-start: 0;
+    margin: -5px 0 0 0;
+    background-color: black;
+    align-items: center;
+}
+
+.symbol{
+    text-align: center;
+    list-style: none;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    width: 240px;
+    
+}
+
+.symbol1{
+    text-align: center;
+    list-style: none;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.image{
+    height: 200px;
+    width: 200px;
+}
+
